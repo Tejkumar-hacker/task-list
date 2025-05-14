@@ -1,0 +1,105 @@
+/* Reset and layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #a5c0e8;
+    background: linear-gradient(to bottom, #2163c5, #f7f7f7);
+  color: #333;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Input and Button Section */
+input#taskInput {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  margin-right: 10px;
+  outline: none;
+}
+
+button#addTaskButton {
+  padding: 10px 16px;
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button#addTaskButton:hover {
+  background-color: #0056b3;
+}
+
+/* Task List Styling */
+ul#taskList {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+ul#taskList li {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+ul#taskList li:hover {
+  transform: scale(1.01);
+}
+
+/* Task text */
+ul#taskList span {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 1rem;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+/* Completed tasks */
+ul#taskList input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: rgb(60, 56, 56);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: rgb(243, 3, 3);
+}
+
+ul#taskList button:hover {
+  background-color: darkred;
+}
